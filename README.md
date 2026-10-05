@@ -11,6 +11,7 @@ python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
 python3 python_basics/04_sort/test_solution.py
+python3 python_basics/05_heap_bisect/test_solution.py
 ```
 
 ## 문제 목록
@@ -28,6 +29,7 @@ python3 python_basics/04_sort/test_solution.py
 | 02 | 2026-10-05 | [dict · set](python_basics/02_dict_set/problem.md) | `dict.get` 개수 세기, 그룹 묶기, set 연산자 |
 | 03 | 2026-10-06 | [collections](python_basics/03_collections/problem.md) | `Counter.most_common`, `defaultdict(list)`, `deque` 큐 시뮬레이션 |
 | 04 | 2026-10-06 | [정렬](python_basics/04_sort/problem.md) | `sort` vs `sorted`, 튜플 비교, `key=lambda` 다중 기준·내림차순 |
+| 05 | 2026-10-06 | [heapq · bisect](python_basics/05_heap_bisect/problem.md) | 최대 힙(음수), 튜플 힙, `bisect`로 구간 개수 세기 |
 
 ## 문제마다 지키는 순서
 
