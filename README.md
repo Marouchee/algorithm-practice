@@ -6,6 +6,7 @@
 
 ```bash
 python3 001_dedup_window/test_solution.py
+python3 002_top_k/test_solution.py
 ```
 
 ## 문제 목록
@@ -13,7 +14,7 @@ python3 001_dedup_window/test_solution.py
 | # | 날짜 | 문제 | 유형 | 시간 복잡도 |
 |---|---|---|---|---|
 | 001 | 2026-10-05 | [시간 윈도 내 중복 이벤트 제거](001_dedup_window/problem.md) | 해시, 큐 | O(n) |
-| 002 | - | [조회수 Top K](002_top_k/problem.md) | 해시, 정렬 | - |
+| 002 | 2026-10-05 | [조회수 Top K](002_top_k/problem.md) | 해시, 정렬 | O(n + m log m) |
 
 ## 문제마다 지키는 순서
 
