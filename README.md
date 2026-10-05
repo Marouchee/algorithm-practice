@@ -13,6 +13,7 @@ python3 python_basics/03_collections/test_solution.py
 python3 python_basics/04_sort/test_solution.py
 python3 python_basics/05_heap_bisect/test_solution.py
 python3 python_basics/06_itertools/test_solution.py
+python3 python_basics/07_stdin_recursion/test_solution.py
 ```
 
 ## 문제 목록
@@ -32,6 +33,7 @@ python3 python_basics/06_itertools/test_solution.py
 | 04 | 2026-10-06 | [정렬](python_basics/04_sort/problem.md) | `sort` vs `sorted`, 튜플 비교, `key=lambda` 다중 기준·내림차순 |
 | 05 | 2026-10-06 | [heapq · bisect](python_basics/05_heap_bisect/problem.md) | 최대 힙(음수), 튜플 힙, `bisect`로 구간 개수 세기 |
 | 06 | 2026-10-06 | [itertools](python_basics/06_itertools/problem.md) | 순열·조합·product 개수, `combinations` 필터, `permutations` + `join` |
+| 07 | 2026-10-06 | [표준 입력 · 재귀 한도](python_basics/07_stdin_recursion/problem.md) | `sys.stdin.readline`, 숫자·문자 격자 입력, `setrecursionlimit` |
 
 ## 문제마다 지키는 순서
 
