@@ -7,6 +7,7 @@
 ```bash
 python3 001_dedup_window/test_solution.py
 python3 002_top_k/test_solution.py
+python3 python_basics/01_list/test_solution.py
 ```
 
 ## 문제 목록
@@ -15,6 +16,12 @@ python3 002_top_k/test_solution.py
 |---|---|---|---|---|
 | 001 | 2026-10-05 | [시간 윈도 내 중복 이벤트 제거](001_dedup_window/problem.md) | 해시, 큐 | O(n) |
 | 002 | 2026-10-05 | [조회수 Top K](002_top_k/problem.md) | 해시, 정렬 | O(n + m log m) |
+
+## 파이썬 문법 드릴
+
+| # | 날짜 | 주제 | 다룬 문법 |
+|---|---|---|---|
+| 01 | 2026-10-05 | [list](python_basics/01_list/problem.md) | 슬라이싱, 컴프리헨션, 2차원 리스트 생성·전치 |
 
 ## 문제마다 지키는 순서
 
