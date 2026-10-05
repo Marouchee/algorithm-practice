@@ -9,6 +9,7 @@ python3 001_dedup_window/test_solution.py
 python3 002_top_k/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
+python3 python_basics/03_collections/test_solution.py
 ```
 
 ## 문제 목록
@@ -24,6 +25,7 @@ python3 python_basics/02_dict_set/test_solution.py
 |---|---|---|---|
 | 01 | 2026-10-05 | [list](python_basics/01_list/problem.md) | 슬라이싱, 컴프리헨션, 2차원 리스트 생성·전치 |
 | 02 | 2026-10-05 | [dict · set](python_basics/02_dict_set/problem.md) | `dict.get` 개수 세기, 그룹 묶기, set 연산자 |
+| 03 | 2026-10-06 | [collections](python_basics/03_collections/problem.md) | `Counter.most_common`, `defaultdict(list)`, `deque` 큐 시뮬레이션 |
 
 ## 문제마다 지키는 순서
 
