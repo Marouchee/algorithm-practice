@@ -14,6 +14,7 @@ python3 python_basics/04_sort/test_solution.py
 python3 python_basics/05_heap_bisect/test_solution.py
 python3 python_basics/06_itertools/test_solution.py
 python3 python_basics/07_stdin_recursion/test_solution.py
+python3 programmers/hash/완주하지_못한_선수.py
 ```
 
 ## 문제 목록
@@ -22,6 +23,12 @@ python3 python_basics/07_stdin_recursion/test_solution.py
 |---|---|---|---|---|
 | 001 | 2026-10-05 | [시간 윈도 내 중복 이벤트 제거](001_dedup_window/problem.md) | 해시, 큐 | O(n) |
 | 002 | 2026-10-05 | [조회수 Top K](002_top_k/problem.md) | 해시, 정렬 | O(n + m log m) |
+
+## 프로그래머스
+
+| 날짜 | 문제 | 레벨 | 유형 | 시간 복잡도 |
+|---|---|---|---|---|
+| 2026-10-06 | [완주하지 못한 선수](programmers/hash/완주하지_못한_선수.py) | Lv.1 | 해시 | O(n) |
 
 ## 파이썬 문법 드릴
 
