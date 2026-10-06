@@ -16,6 +16,7 @@ python3 python_basics/06_itertools/test_solution.py
 python3 python_basics/07_stdin_recursion/test_solution.py
 python3 programmers/hash/완주하지_못한_선수.py
 python3 programmers/hash/폰켓몬.py
+(cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
 
 ## 문제 목록
