@@ -17,6 +17,7 @@ python3 python_basics/07_stdin_recursion/test_solution.py
 python3 programmers/hash/완주하지_못한_선수.py
 python3 programmers/hash/폰켓몬.py
 python3 programmers/hash/전화번호_목록.py
+python3 programmers/sort/K번째수.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
 
@@ -34,6 +35,7 @@ python3 programmers/hash/전화번호_목록.py
 | 2026-10-06 | [완주하지 못한 선수](programmers/hash/완주하지_못한_선수.py) | Lv.1 | 해시 | O(n) |
 | 2026-10-06 | [폰켓몬](programmers/hash/폰켓몬.py) | Lv.1 | 해시 | O(n) |
 | 2026-10-07 | [전화번호 목록](programmers/hash/전화번호_목록.py) | Lv.2 | 해시 | O(n) |
+| 2026-10-07 | [K번째수](programmers/sort/K번째수.py) | Lv.1 | 정렬 | O(c · n log n) |
 
 ## SQL 드릴
 
