@@ -18,6 +18,7 @@ python3 programmers/hash/완주하지_못한_선수.py
 python3 programmers/hash/폰켓몬.py
 python3 programmers/hash/전화번호_목록.py
 python3 programmers/sort/K번째수.py
+python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
 
@@ -36,6 +37,19 @@ python3 programmers/sort/K번째수.py
 | 2026-10-06 | [폰켓몬](programmers/hash/폰켓몬.py) | Lv.1 | 해시 | O(n) |
 | 2026-10-07 | [전화번호 목록](programmers/hash/전화번호_목록.py) | Lv.2 | 해시 | O(n) |
 | 2026-10-07 | [K번째수](programmers/sort/K번째수.py) | Lv.1 | 정렬 | O(c · n log n) |
+
+## 프로그래머스 SQL
+
+프로그래머스(MySQL)에서 채점을 통과한 쿼리입니다. `test_sql.py`는 가상 데이터(SQLite)로 다시 실행해 봅니다.
+
+| 날짜 | 문제 | 레벨 | 유형 |
+|---|---|---|---|
+| 2026-10-07 | [이름이 없는 동물의 아이디](programmers/sql/이름이_없는_동물의_아이디.sql) | Lv.1 | IS NULL |
+| 2026-10-07 | [NULL 처리하기](programmers/sql/NULL_처리하기.sql) | Lv.2 | IS NULL |
+| 2026-10-07 | [고양이와 개는 몇 마리 있을까](programmers/sql/고양이와_개는_몇_마리_있을까.sql) | Lv.2 | GROUP BY |
+| 2026-10-07 | [동명 동물 수 찾기](programmers/sql/동명_동물_수_찾기.sql) | Lv.2 | GROUP BY |
+| 2026-10-07 | [없어진 기록 찾기](programmers/sql/없어진_기록_찾기.sql) | Lv.3 | JOIN |
+| 2026-10-07 | [오랜 기간 보호한 동물(1)](programmers/sql/오랜_기간_보호한_동물_1.sql) | Lv.3 | JOIN |
 
 ## SQL 드릴
 
