@@ -50,6 +50,9 @@ python3 programmers/sql/test_sql.py
 | 2026-10-07 | [동명 동물 수 찾기](programmers/sql/동명_동물_수_찾기.sql) | Lv.2 | GROUP BY |
 | 2026-10-07 | [없어진 기록 찾기](programmers/sql/없어진_기록_찾기.sql) | Lv.3 | JOIN |
 | 2026-10-07 | [오랜 기간 보호한 동물(1)](programmers/sql/오랜_기간_보호한_동물_1.sql) | Lv.3 | JOIN |
+| 2026-10-08 | [이름에 el이 들어가는 동물 찾기](programmers/sql/이름에_el이_들어가는_동물_찾기.sql) | Lv.2 | String, Date (`LIKE`) |
+| 2026-10-08 | [중성화 여부 파악하기](programmers/sql/중성화_여부_파악하기.sql) | Lv.2 | String, Date (`CASE WHEN`) |
+| 2026-10-08 | [DATETIME에서 DATE로 형 변환](programmers/sql/DATETIME에서_DATE로_형_변환.sql) | Lv.2 | String, Date (`DATE_FORMAT`) |
 
 ## SQL 드릴
 
