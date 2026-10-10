@@ -20,6 +20,7 @@ python3 programmers/hash/전화번호_목록.py
 python3 programmers/sort/K번째수.py
 python3 programmers/sort/가장_큰_수.py
 python3 programmers/sort/H-Index.py
+python3 programmers/brute_force/모의고사.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
@@ -41,6 +42,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-07 | [K번째수](programmers/sort/K번째수.py) | Lv.1 | 정렬 | O(c · n log n) |
 | 2026-10-08 | [가장 큰 수](programmers/sort/가장_큰_수.py) | Lv.2 | 정렬 | O(n log n) |
 | 2026-10-08 | [H-Index](programmers/sort/H-Index.py) | Lv.2 | 정렬 | O(n log n) |
+| 2026-10-10 | [모의고사](programmers/brute_force/모의고사.py) | Lv.1 | 완전탐색 | O(n) |
 
 ## 프로그래머스 SQL
 
