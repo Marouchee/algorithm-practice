@@ -6,6 +6,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/42842
 시간 복잡도: O(yellow). h - 2 <= yellow라 range 끝을 yellow + 3으로 잡았다
              (실제로는 h <= w인 답에서 멈추므로 최대 약 sqrt(brown + yellow)번 돈다)
 """
+import random
 import time
 
 
@@ -30,15 +31,17 @@ if __name__ == "__main__":
     assert solution(24, 24) == [8, 6]                # h=3, 4는 나누어떨어지지만 노란 칸 조건에서 걸러진다
     assert solution(5000, 1560001) == [1251, 1251]   # 정사각형, 반복이 가장 긴 입력
 
-    # 제한 안의 모든 유효 입력 (w >= h >= 3, brown <= 5,000, yellow <= 2,000,000)
+    # 제한 안의 유효 입력 (w >= h >= 3, brown <= 5,000, yellow <= 2,000,000) 중 무작위 20,000개
+    random.seed(0)
     start = time.time()
     count = 0
-    for h in range(3, 1300):
-        for w in range(h, 2600):
-            b, y = 2*w + 2*h - 4, (w-2)*(h-2)
-            if b > 5000 or y > 2_000_000:
-                break
-            assert solution(b, y) == [w, h], (b, y)
-            count += 1
-    print(f"valid inputs {count}: {time.time() - start:.2f}s")
+    while count < 20000:
+        h = random.randint(3, 1251)
+        w = random.randint(h, 2499)
+        b, y = 2*w + 2*h - 4, (w-2)*(h-2)
+        if b > 5000 or y > 2_000_000:
+            continue
+        assert solution(b, y) == [w, h], (b, y)
+        count += 1
+    print(f"random valid inputs {count}: {time.time() - start:.2f}s")
     print("all tests passed")
