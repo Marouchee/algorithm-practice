@@ -21,6 +21,7 @@ python3 programmers/sort/K번째수.py
 python3 programmers/sort/가장_큰_수.py
 python3 programmers/sort/H-Index.py
 python3 programmers/brute_force/모의고사.py
+python3 programmers/brute_force/카펫.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
@@ -43,6 +44,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-08 | [가장 큰 수](programmers/sort/가장_큰_수.py) | Lv.2 | 정렬 | O(n log n) |
 | 2026-10-08 | [H-Index](programmers/sort/H-Index.py) | Lv.2 | 정렬 | O(n log n) |
 | 2026-10-10 | [모의고사](programmers/brute_force/모의고사.py) | Lv.1 | 완전탐색 | O(n) |
+| 2026-10-10 | [카펫](programmers/brute_force/카펫.py) | Lv.2 | 완전탐색 | O(yellow) |
 
 ## 프로그래머스 SQL
 
