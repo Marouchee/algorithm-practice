@@ -25,6 +25,7 @@ python3 programmers/brute_force/카펫.py
 python3 programmers/brute_force/소수_찾기.py
 python3 programmers/dfs_bfs/타겟_넘버.py
 python3 programmers/dfs_bfs/게임_맵_최단거리.py
+python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
@@ -51,6 +52,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-10 | [소수 찾기](programmers/brute_force/소수_찾기.py) | Lv.2 | 완전탐색 | O(P · √M) |
 | 2026-10-10 | [타겟 넘버](programmers/dfs_bfs/타겟_넘버.py) | Lv.2 | DFS | O(2^n) |
 | 2026-10-10 | [게임 맵 최단거리](programmers/dfs_bfs/게임_맵_최단거리.py) | Lv.2 | BFS | O(n · m) |
+| 2026-10-12 | [신규 아이디 추천](programmers/implementation/신규_아이디_추천.py) | Lv.1 | 구현 | O(n) |
 
 ## 프로그래머스 SQL
 
