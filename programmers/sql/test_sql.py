@@ -35,6 +35,11 @@ OUTS = [
     ("A004", "Cat", "2025-02-15 11:00:00", "Luna", "Spayed Female"),
     ("A090", "Dog", "2025-01-10 15:00:00", "Ghost", "Intact Male"),    # 입소 기록 없음
     ("A080", "Cat", "2025-01-12 17:00:00", "Bella", "Spayed Female"),  # 입소 기록 없음
+    ("A003", "Dog", "2025-02-20 09:00:00", "Max", "Neutered Male"),      # 9시 정각: 포함
+    ("A006", "Cat", "2025-03-05 19:59:00", "Coco", "Neutered Male"),     # 19시 59분: 포함
+    ("A008", "Bird", "2025-03-08 08:59:00", "Kiwi", "Intact Male"),      # 8시 59분: 제외
+    ("A009", "Dog", "2025-03-15 20:00:00", "Ella", "Spayed Female"),     # 20시 정각: 제외
+    ("A010", "Cat", "2025-03-12 10:30:00", "Mabel", "Spayed Female"),    # 10시 두 번째
 ]
 
 
@@ -43,9 +48,15 @@ def date_format(value: str, fmt: str) -> str:
     return datetime.strptime(value, "%Y-%m-%d %H:%M:%S").strftime(fmt)
 
 
+def hour(value: str) -> int:
+    """SQLite에는 MySQL HOUR가 없어서 흉내 낸다."""
+    return datetime.strptime(value, "%Y-%m-%d %H:%M:%S").hour
+
+
 def connect() -> sqlite3.Connection:
     con = sqlite3.connect(":memory:")
     con.create_function("DATE_FORMAT", 2, date_format)
+    con.create_function("HOUR", 1, hour)
     con.executescript(SCHEMA)
     con.executemany("INSERT INTO ANIMAL_INS VALUES (?, ?, ?, ?, ?, ?)", INS)
     con.executemany("INSERT INTO ANIMAL_OUTS VALUES (?, ?, ?, ?, ?)", OUTS)
@@ -83,4 +94,6 @@ if __name__ == "__main__":
     assert rows[2] == ("A003", "Max", "X")        # Intact
 
     assert run("DATETIME에서_DATE로_형_변환")[0] == ("A001", "Max", "2025-01-05")
+
+    assert run("입양_시각_구하기_1") == [(9, 1), (10, 2), (11, 1), (15, 1), (17, 1), (19, 1)]   # 8시 59분, 20시 정각 제외
     print("all tests passed")

@@ -67,6 +67,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-08 | [이름에 el이 들어가는 동물 찾기](programmers/sql/이름에_el이_들어가는_동물_찾기.sql) | Lv.2 | String, Date (`LIKE`) |
 | 2026-10-08 | [중성화 여부 파악하기](programmers/sql/중성화_여부_파악하기.sql) | Lv.2 | String, Date (`CASE WHEN`) |
 | 2026-10-08 | [DATETIME에서 DATE로 형 변환](programmers/sql/DATETIME에서_DATE로_형_변환.sql) | Lv.2 | String, Date (`DATE_FORMAT`) |
+| 2026-10-12 | [입양 시각 구하기(1)](programmers/sql/입양_시각_구하기_1.sql) | Lv.2 | GROUP BY (`HOUR`) |
 
 ## SQL 드릴
 
