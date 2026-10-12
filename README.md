@@ -28,6 +28,7 @@ python3 programmers/dfs_bfs/게임_맵_최단거리.py
 python3 programmers/dfs_bfs/네트워크.py
 python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/implementation/키패드_누르기.py
+python3 baekjoon/test_1463_1로_만들기.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
 ```
@@ -57,6 +58,12 @@ python3 programmers/sql/test_sql.py
 | 2026-10-12 | [신규 아이디 추천](programmers/implementation/신규_아이디_추천.py) | Lv.1 | 구현 | O(n) |
 | 2026-10-12 | [키패드 누르기](programmers/implementation/키패드_누르기.py) | Lv.1 | 구현 | O(N) |
 | 2026-10-12 | [네트워크](programmers/dfs_bfs/네트워크.py) | Lv.3 | DFS | O(n²) |
+
+## 백준
+
+| 날짜 | 문제 | 유형 | 시간 복잡도 |
+|---|---|---|---|
+| 2026-10-12 | [1463 1로 만들기](baekjoon/1463_1로_만들기.py) | DP | O(N) |
 
 ## 프로그래머스 SQL
 
