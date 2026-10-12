@@ -25,6 +25,7 @@ python3 programmers/brute_force/카펫.py
 python3 programmers/brute_force/소수_찾기.py
 python3 programmers/dfs_bfs/타겟_넘버.py
 python3 programmers/dfs_bfs/게임_맵_최단거리.py
+python3 programmers/dfs_bfs/네트워크.py
 python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/implementation/키패드_누르기.py
 python3 programmers/sql/test_sql.py
@@ -55,6 +56,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-10 | [게임 맵 최단거리](programmers/dfs_bfs/게임_맵_최단거리.py) | Lv.2 | BFS | O(n · m) |
 | 2026-10-12 | [신규 아이디 추천](programmers/implementation/신규_아이디_추천.py) | Lv.1 | 구현 | O(n) |
 | 2026-10-12 | [키패드 누르기](programmers/implementation/키패드_누르기.py) | Lv.1 | 구현 | O(N) |
+| 2026-10-12 | [네트워크](programmers/dfs_bfs/네트워크.py) | Lv.3 | DFS | O(n²) |
 
 ## 프로그래머스 SQL
 
