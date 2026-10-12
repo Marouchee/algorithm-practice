@@ -71,6 +71,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-08 | [DATETIME에서 DATE로 형 변환](programmers/sql/DATETIME에서_DATE로_형_변환.sql) | Lv.2 | String, Date (`DATE_FORMAT`) |
 | 2026-10-12 | [입양 시각 구하기(1)](programmers/sql/입양_시각_구하기_1.sql) | Lv.2 | GROUP BY (`HOUR`) |
 | 2026-10-12 | [있었는데요 없었습니다](programmers/sql/있었는데요_없었습니다.sql) | Lv.3 | JOIN |
+| 2026-10-12 | [중복 제거하기](programmers/sql/중복_제거하기.sql) | Lv.2 | SUM, MAX, MIN (`COUNT(DISTINCT)`) |
 
 ## SQL 드릴
 
