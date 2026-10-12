@@ -99,6 +99,11 @@ if __name__ == "__main__":
     # 이름 11행 중 NULL 2개, Max·Luna 중복 → 7 (COUNT(*)는 11, COUNT(NAME)은 9)
     assert run("중복_제거하기") == [(7,)]
 
+    # Intact → Neutered/Spayed만. A008(Intact → Intact), A001·A004·A009(들어올 때 이미 중성화) 제외
+    assert run("보호소에서_중성화한_동물") == [
+        ("A003", "Dog", "Max"), ("A006", "Cat", "Coco"), ("A010", "Cat", "Mabel"), ("A011", "Dog", "Noel"),
+    ]
+
     # 보호 시작일 순이면 A010 → A011, 입양일 순이면 거꾸로
     assert run("있었는데요_없었습니다") == [("A010", "Mabel"), ("A011", "Noel")]
 

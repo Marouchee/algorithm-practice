@@ -72,6 +72,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-12 | [입양 시각 구하기(1)](programmers/sql/입양_시각_구하기_1.sql) | Lv.2 | GROUP BY (`HOUR`) |
 | 2026-10-12 | [있었는데요 없었습니다](programmers/sql/있었는데요_없었습니다.sql) | Lv.3 | JOIN |
 | 2026-10-12 | [중복 제거하기](programmers/sql/중복_제거하기.sql) | Lv.2 | SUM, MAX, MIN (`COUNT(DISTINCT)`) |
+| 2026-10-12 | [보호소에서 중성화한 동물](programmers/sql/보호소에서_중성화한_동물.sql) | Lv.4 | JOIN (`LIKE`, `AND`·`OR` 괄호) |
 
 ## SQL 드릴
 
