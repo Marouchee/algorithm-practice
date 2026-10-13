@@ -14,6 +14,10 @@ CREATE TABLE ANIMAL_OUTS (
     ANIMAL_ID TEXT, ANIMAL_TYPE TEXT, DATETIME TEXT,
     NAME TEXT, SEX_UPON_OUTCOME TEXT
 );
+CREATE TABLE APPOINTMENT (
+    APNT_YMD TEXT, APNT_NO INTEGER, PT_NO TEXT, MCDP_CD TEXT,
+    MDDR_ID TEXT, APNT_CNCL_YN TEXT, APNT_CNCL_YMD TEXT
+);
 """
 
 INS = [
@@ -43,6 +47,20 @@ OUTS = [
     ("A011", "Dog", "2025-03-01 07:00:00", "Noel", "Neutered Male"),     # 보호 시작(3/12)보다 이른 입양
 ]
 
+APPOINTMENTS = [
+    ("2022-05-02 09:00:00", 1, "P01", "CS", "D01", "N", None),
+    ("2022-05-20 10:00:00", 2, "P02", "CS", "D01", "N", None),
+    ("2022-05-01 00:00:00", 3, "P03", "GS", "D02", "N", None),    # 5월 첫 순간: 포함
+    ("2022-05-31 23:59:00", 4, "P04", "GS", "D02", "N", None),    # 5월 마지막 순간: 포함, CS와 2건 동률
+    ("2022-05-10 11:00:00", 5, "P05", "OS", "D03", "N", None),
+    ("2022-04-30 23:59:00", 6, "P06", "PD", "D04", "N", None),    # 4월: 제외
+    ("2022-06-01 00:00:00", 7, "P07", "PD", "D04", "N", None),    # 6월: 제외
+    ("2021-05-15 12:00:00", 8, "P08", "PD", "D04", "N", None),    # 2021년 5월: 제외
+    ("2022-05-03 09:00:00", 9, "P09", "NP", "D05", "N", None),
+    ("2022-05-04 09:00:00", 10, "P10", "NP", "D05", "N", None),
+    ("2022-05-05 09:00:00", 11, "P11", "NP", "D05", "N", None),
+]
+
 
 def date_format(value: str, fmt: str) -> str:
     """SQLite에는 MySQL DATE_FORMAT이 없어서 흉내 낸다 (%Y, %m, %d는 strftime과 같다)."""
@@ -54,13 +72,26 @@ def hour(value: str) -> int:
     return datetime.strptime(value, "%Y-%m-%d %H:%M:%S").hour
 
 
+def month(value: str) -> str:
+    """MySQL MONTH 흉내. MySQL은 5 = '5'를 참으로 보지만 SQLite는 거짓으로 보므로, 문자열 비교 쿼리에 맞춰 문자열로 돌려준다."""
+    return str(datetime.strptime(value, "%Y-%m-%d %H:%M:%S").month)
+
+
+def year(value: str) -> str:
+    """MySQL YEAR 흉내 (month와 같은 이유로 문자열)"""
+    return str(datetime.strptime(value, "%Y-%m-%d %H:%M:%S").year)
+
+
 def connect() -> sqlite3.Connection:
     con = sqlite3.connect(":memory:")
     con.create_function("DATE_FORMAT", 2, date_format)
     con.create_function("HOUR", 1, hour)
+    con.create_function("MONTH", 1, month)
+    con.create_function("YEAR", 1, year)
     con.executescript(SCHEMA)
     con.executemany("INSERT INTO ANIMAL_INS VALUES (?, ?, ?, ?, ?, ?)", INS)
     con.executemany("INSERT INTO ANIMAL_OUTS VALUES (?, ?, ?, ?, ?)", OUTS)
+    con.executemany("INSERT INTO APPOINTMENT VALUES (?, ?, ?, ?, ?, ?, ?)", APPOINTMENTS)
     return con
 
 
@@ -108,4 +139,7 @@ if __name__ == "__main__":
     assert run("있었는데요_없었습니다") == [("A010", "Mabel"), ("A011", "Noel")]
 
     assert run("입양_시각_구하기_1") == [(9, 1), (10, 2), (11, 1), (15, 1), (17, 1), (19, 1)]   # 8시 59분, 20시 정각 제외
+
+    # 건수 오름차순, 동률(CS·GS 2건)은 진료과 코드 오름차순. PD는 5월 예약이 없어 행 자체가 없음
+    assert run("진료과별_총_예약_횟수_출력하기") == [("OS", 1), ("CS", 2), ("GS", 2), ("NP", 3)]
     print("all tests passed")

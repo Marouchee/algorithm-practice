@@ -23,11 +23,14 @@ python3 programmers/sort/H-Index.py
 python3 programmers/brute_force/모의고사.py
 python3 programmers/brute_force/카펫.py
 python3 programmers/brute_force/소수_찾기.py
+python3 programmers/brute_force/피로도.py
 python3 programmers/dfs_bfs/타겟_넘버.py
 python3 programmers/dfs_bfs/게임_맵_최단거리.py
 python3 programmers/dfs_bfs/네트워크.py
+python3 programmers/dfs_bfs/미로_탈출.py
 python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/implementation/키패드_누르기.py
+python3 programmers/implementation/크레인_인형뽑기_게임.py
 python3 baekjoon/test_1463_1로_만들기.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
@@ -58,6 +61,9 @@ python3 programmers/sql/test_sql.py
 | 2026-10-12 | [신규 아이디 추천](programmers/implementation/신규_아이디_추천.py) | Lv.1 | 구현 | O(n) |
 | 2026-10-12 | [키패드 누르기](programmers/implementation/키패드_누르기.py) | Lv.1 | 구현 | O(N) |
 | 2026-10-12 | [네트워크](programmers/dfs_bfs/네트워크.py) | Lv.3 | DFS | O(n²) |
+| 2026-10-14 | [크레인 인형뽑기 게임](programmers/implementation/크레인_인형뽑기_게임.py) | Lv.1 | 구현, 스택 | O(M · N) |
+| 2026-10-14 | [피로도](programmers/brute_force/피로도.py) | Lv.2 | 완전탐색 | O(n! · n) |
+| 2026-10-14 | [미로 탈출](programmers/dfs_bfs/미로_탈출.py) | Lv.2 | BFS | O(n · m) |
 
 ## 백준
 
@@ -84,6 +90,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-12 | [있었는데요 없었습니다](programmers/sql/있었는데요_없었습니다.sql) | Lv.3 | JOIN |
 | 2026-10-12 | [중복 제거하기](programmers/sql/중복_제거하기.sql) | Lv.2 | SUM, MAX, MIN (`COUNT(DISTINCT)`) |
 | 2026-10-12 | [보호소에서 중성화한 동물](programmers/sql/보호소에서_중성화한_동물.sql) | Lv.4 | JOIN (`LIKE`, `AND`·`OR` 괄호) |
+| 2026-10-14 | [진료과별 총 예약 횟수 출력하기](programmers/sql/진료과별_총_예약_횟수_출력하기.sql) | Lv.2 | GROUP BY (`MONTH`·`YEAR`, 정렬 2개) |
 
 ## SQL 드릴
 
