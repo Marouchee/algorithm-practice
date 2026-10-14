@@ -91,6 +91,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-12 | [중복 제거하기](programmers/sql/중복_제거하기.sql) | Lv.2 | SUM, MAX, MIN (`COUNT(DISTINCT)`) |
 | 2026-10-12 | [보호소에서 중성화한 동물](programmers/sql/보호소에서_중성화한_동물.sql) | Lv.4 | JOIN (`LIKE`, `AND`·`OR` 괄호) |
 | 2026-10-14 | [진료과별 총 예약 횟수 출력하기](programmers/sql/진료과별_총_예약_횟수_출력하기.sql) | Lv.2 | GROUP BY (`MONTH`·`YEAR`, 정렬 2개) |
+| 2026-10-15 | [조건에 맞는 사용자와 총 거래금액 조회하기](programmers/sql/조건에_맞는_사용자와_총_거래금액_조회하기.sql) | Lv.3 | JOIN (`GROUP BY`·`HAVING`) |
 
 ## SQL 드릴
 

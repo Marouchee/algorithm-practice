@@ -18,6 +18,14 @@ CREATE TABLE APPOINTMENT (
     APNT_YMD TEXT, APNT_NO INTEGER, PT_NO TEXT, MCDP_CD TEXT,
     MDDR_ID TEXT, APNT_CNCL_YN TEXT, APNT_CNCL_YMD TEXT
 );
+CREATE TABLE USED_GOODS_BOARD (
+    BOARD_ID TEXT, WRITER_ID TEXT, TITLE TEXT, CONTENTS TEXT,
+    PRICE INTEGER, CREATED_DATE TEXT, STATUS TEXT, VIEWS INTEGER
+);
+CREATE TABLE USED_GOODS_USER (
+    USER_ID TEXT, NICKNAME TEXT, CITY TEXT,
+    STREET_ADDRESS1 TEXT, STREET_ADDRESS2 TEXT, TLNO TEXT
+);
 """
 
 INS = [
@@ -61,6 +69,25 @@ APPOINTMENTS = [
     ("2022-05-05 09:00:00", 11, "P11", "NP", "D05", "N", None),
 ]
 
+GOODS_USERS = [
+    ("u1", "하늘", "서울", "", "", ""),
+    ("u2", "바다", "부산", "", "", ""),
+    ("u3", "구름", "대전", "", "", ""),
+    ("u4", "별빛", "광주", "", "", ""),
+    ("u5", "노을", "인천", "", "", ""),
+]
+
+GOODS_BOARD = [
+    ("B01", "u1", "", "", 500000, "2022-10-01", "DONE", 1),
+    ("B02", "u1", "", "", 300000, "2022-10-02", "DONE", 1),      # u1 합계 800,000
+    ("B03", "u1", "", "", 900000, "2022-10-03", "SALE", 1),      # 판매 중: 제외
+    ("B04", "u2", "", "", 700000, "2022-10-04", "DONE", 1),      # u2 정확히 700,000: 포함
+    ("B05", "u3", "", "", 699999, "2022-10-05", "DONE", 1),      # u3 1원 모자람: 제외
+    ("B06", "u4", "", "", 1000000, "2022-10-06", "RESERVED", 1), # u4 완료 거래 없음: 제외
+    ("B07", "u5", "", "", 600000, "2022-10-07", "DONE", 1),
+    ("B08", "u5", "", "", 400000, "2022-10-08", "DONE", 1),      # u5 합계 1,000,000
+]
+
 
 def date_format(value: str, fmt: str) -> str:
     """SQLite에는 MySQL DATE_FORMAT이 없어서 흉내 낸다 (%Y, %m, %d는 strftime과 같다)."""
@@ -92,6 +119,8 @@ def connect() -> sqlite3.Connection:
     con.executemany("INSERT INTO ANIMAL_INS VALUES (?, ?, ?, ?, ?, ?)", INS)
     con.executemany("INSERT INTO ANIMAL_OUTS VALUES (?, ?, ?, ?, ?)", OUTS)
     con.executemany("INSERT INTO APPOINTMENT VALUES (?, ?, ?, ?, ?, ?, ?)", APPOINTMENTS)
+    con.executemany("INSERT INTO USED_GOODS_USER VALUES (?, ?, ?, ?, ?, ?)", GOODS_USERS)
+    con.executemany("INSERT INTO USED_GOODS_BOARD VALUES (?, ?, ?, ?, ?, ?, ?, ?)", GOODS_BOARD)
     return con
 
 
@@ -142,4 +171,9 @@ if __name__ == "__main__":
 
     # 건수 오름차순, 동률(CS·GS 2건)은 진료과 코드 오름차순. PD는 5월 예약이 없어 행 자체가 없음
     assert run("진료과별_총_예약_횟수_출력하기") == [("OS", 1), ("CS", 2), ("GS", 2), ("NP", 3)]
+
+    # 완료(DONE)만 합산, 70만 원 이상(경계 포함), 합계 오름차순
+    assert run("조건에_맞는_사용자와_총_거래금액_조회하기") == [
+        ("u2", "바다", 700000), ("u1", "하늘", 800000), ("u5", "노을", 1000000),
+    ]
     print("all tests passed")
