@@ -1,8 +1,10 @@
 """프로그래머스 Lv.2 미로 탈출 (BFS)
 https://school.programmers.co.kr/learn/courses/30/lessons/159993
 
-접근: S, L, E 위치를 찾은 뒤 BFS를 두 번 한다. S에서 시작한 BFS로 L까지 거리, dist를 새로 만들어 L에서 시작한 BFS로 E까지 거리를 구한다.
+접근: S, L, E 위치를 반복문 한 번으로 찾고, bfs(start, target)를 두 번 부른다 (S → L, L → E).
+      bfs는 호출마다 dist를 새로 만들고 target까지 거리 하나를 리턴한다.
       둘 중 하나라도 -1(도달 불가)이면 -1, 아니면 두 거리의 합을 리턴한다. 벽(X)만 막히고 E는 레버 전에도 지나갈 수 있다.
+      (모의고사 때는 BFS 블록 두 개를 복사해 썼고, 복기에서 함수로 정리했다)
 시간 복잡도: O(n · m). BFS 두 번, 각 칸은 BFS마다 한 번만 큐에 들어간다
 """
 import random
@@ -14,63 +16,44 @@ def solution(maps):
     answer = 0
     n = len(maps)
     m = len(maps[0])
-    dist = [[-1 for _ in range (m)] for _ in range(n)]
+
     n_list = [(1,0), (-1,0), (0,-1), (0,1)]
 
     for i in range(n):
         for j in range(m):
             if maps[i][j] == 'L':
                 leber = (i,j)
-    for i in range(n):
-        for j in range(m):
             if maps[i][j] == 'S':
                 start = (i,j)
-    for i in range(n):
-        for j in range(m):
             if maps[i][j] == 'E':
-                exit = (i,j)
+                end = (i,j)
 
-    q = deque([start])
-    dist[start[0]][start[1]] = 0
-    while q:
-        x, y = q.popleft()
-        for a,b in n_list:
-            nx = x + a
-            ny = y + b
-            if nx < 0 or ny < 0 or nx > n-1 or ny > m-1:
-                continue
-            if maps[nx][ny] == 'X':
-                continue
-            if dist[nx][ny] != -1:
-                continue
-            q.append((nx,ny))
-            dist[nx][ny] = dist[x][y] + 1
+    def bfs(start, target):
+        dist = [[-1 for _ in range (m)] for _ in range(n)]
+        dist[start[0]][start[1]] = 0
+        q = deque([start])
+        while q:
+            x, y = q.popleft()
+            for a,b in n_list:
+                nx = x + a
+                ny = y + b
+                if nx < 0 or ny < 0 or nx > n-1 or ny > m-1:
+                    continue
+                if maps[nx][ny] == 'X':
+                    continue
+                if dist[nx][ny] != -1:
+                    continue
+                q.append((nx,ny))
+                dist[nx][ny] = dist[x][y] + 1
+        return dist[target[0]][target[1]]
 
-    start_to_leber = dist[leber[0]][leber[1]]
+    start_to_leber = bfs(start, leber)
+    leber_to_end = bfs(leber, end)
 
-    dist = [[-1 for _ in range (m)] for _ in range(n)]
-    q = deque([leber])
-    dist[leber[0]][leber[1]] = 0
-    while q:
-        x, y = q.popleft()
-        for a,b in n_list:
-            nx = x + a
-            ny = y + b
-            if nx < 0 or ny < 0 or nx > n-1 or ny > m-1:
-                continue
-            if maps[nx][ny] == 'X':
-                continue
-            if dist[nx][ny] != -1:
-                continue
-            q.append((nx,ny))
-            dist[nx][ny] = dist[x][y] + 1
-
-    leber_to_exit = dist[exit[0]][exit[1]]
-
-    if start_to_leber == -1 or leber_to_exit == -1:
+    if start_to_leber == -1 or leber_to_end == -1:
         answer = -1
     else:
-        answer = start_to_leber + leber_to_exit
+        answer = start_to_leber + leber_to_end
 
     return answer
 
