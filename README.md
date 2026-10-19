@@ -32,6 +32,7 @@ python3 programmers/dfs_bfs/리코쳇_로봇.py
 python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/implementation/키패드_누르기.py
 python3 programmers/implementation/크레인_인형뽑기_게임.py
+python3 programmers/dp/정수_삼각형.py
 python3 baekjoon/test_1463_1로_만들기.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
@@ -66,6 +67,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-14 | [피로도](programmers/brute_force/피로도.py) | Lv.2 | 완전탐색 | O(n! · n) |
 | 2026-10-14 | [미로 탈출](programmers/dfs_bfs/미로_탈출.py) | Lv.2 | BFS | O(n · m) |
 | 2026-10-19 | [리코쳇 로봇](programmers/dfs_bfs/리코쳇_로봇.py) | Lv.2 | BFS (미끄러지는 이동) | O(N · M · max(N, M)) |
+| 2026-10-19 | [정수 삼각형](programmers/dp/정수_삼각형.py) | Lv.3 | DP | O(n²) |
 
 ## 백준
 
