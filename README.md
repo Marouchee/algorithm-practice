@@ -28,6 +28,7 @@ python3 programmers/dfs_bfs/타겟_넘버.py
 python3 programmers/dfs_bfs/게임_맵_최단거리.py
 python3 programmers/dfs_bfs/네트워크.py
 python3 programmers/dfs_bfs/미로_탈출.py
+python3 programmers/dfs_bfs/리코쳇_로봇.py
 python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/implementation/키패드_누르기.py
 python3 programmers/implementation/크레인_인형뽑기_게임.py
@@ -64,6 +65,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-14 | [크레인 인형뽑기 게임](programmers/implementation/크레인_인형뽑기_게임.py) | Lv.1 | 구현, 스택 | O(M · N) |
 | 2026-10-14 | [피로도](programmers/brute_force/피로도.py) | Lv.2 | 완전탐색 | O(n! · n) |
 | 2026-10-14 | [미로 탈출](programmers/dfs_bfs/미로_탈출.py) | Lv.2 | BFS | O(n · m) |
+| 2026-10-19 | [리코쳇 로봇](programmers/dfs_bfs/리코쳇_로봇.py) | Lv.2 | BFS (미끄러지는 이동) | O(N · M · max(N, M)) |
 
 ## 백준
 
