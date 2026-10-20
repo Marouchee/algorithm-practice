@@ -35,6 +35,7 @@ python3 programmers/implementation/키패드_누르기.py
 python3 programmers/implementation/크레인_인형뽑기_게임.py
 python3 programmers/implementation/주차_요금_계산.py
 python3 programmers/dp/정수_삼각형.py
+python3 programmers/dp/등굣길.py
 python3 baekjoon/test_1463_1로_만들기.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
@@ -72,6 +73,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-19 | [정수 삼각형](programmers/dp/정수_삼각형.py) | Lv.3 | DP | O(n²) |
 | 2026-10-19 | [주차 요금 계산](programmers/implementation/주차_요금_계산.py) | Lv.2 | 구현, 해시 | O(n · c + c log c) |
 | 2026-10-20 | [기능개발](programmers/stack_queue/기능개발.py) | Lv.2 | 스택/큐 | O(n · D) |
+| 2026-10-20 | [등굣길](programmers/dp/등굣길.py) | Lv.3 | DP | O(m · n) |
 
 ## 백준
 
