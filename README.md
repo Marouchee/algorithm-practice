@@ -20,6 +20,7 @@ python3 programmers/hash/전화번호_목록.py
 python3 programmers/sort/K번째수.py
 python3 programmers/sort/가장_큰_수.py
 python3 programmers/sort/H-Index.py
+python3 programmers/stack_queue/기능개발.py
 python3 programmers/brute_force/모의고사.py
 python3 programmers/brute_force/카펫.py
 python3 programmers/brute_force/소수_찾기.py
@@ -70,6 +71,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-19 | [리코쳇 로봇](programmers/dfs_bfs/리코쳇_로봇.py) | Lv.2 | BFS (미끄러지는 이동) | O(N · M · max(N, M)) |
 | 2026-10-19 | [정수 삼각형](programmers/dp/정수_삼각형.py) | Lv.3 | DP | O(n²) |
 | 2026-10-19 | [주차 요금 계산](programmers/implementation/주차_요금_계산.py) | Lv.2 | 구현, 해시 | O(n · c + c log c) |
+| 2026-10-20 | [기능개발](programmers/stack_queue/기능개발.py) | Lv.2 | 스택/큐 | O(n · D) |
 
 ## 백준
 
