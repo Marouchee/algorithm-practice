@@ -7,6 +7,7 @@
 ```bash
 python3 001_dedup_window/test_solution.py
 python3 002_top_k/test_solution.py
+python3 003_patrol_robot/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -47,6 +48,7 @@ python3 programmers/sql/test_sql.py
 |---|---|---|---|---|
 | 001 | 2026-10-05 | [시간 윈도 내 중복 이벤트 제거](001_dedup_window/problem.md) | 해시, 큐 | O(n) |
 | 002 | 2026-10-05 | [조회수 Top K](002_top_k/problem.md) | 해시, 정렬 | O(n + m log m) |
+| 003 | 2026-10-23 | [순찰 로봇](003_patrol_robot/problem.md) | 백트래킹 | O(4 · 3^(L-1)), L = min(K, R·C − 1) |
 
 ## 프로그래머스
 
