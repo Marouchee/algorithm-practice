@@ -38,6 +38,7 @@ python3 programmers/implementation/주차_요금_계산.py
 python3 programmers/dp/정수_삼각형.py
 python3 programmers/dp/등굣길.py
 python3 programmers/shortest_path/배달.py
+python3 programmers/shortest_path/합승_택시_요금.py
 python3 programmers/heap/야근_지수.py
 python3 baekjoon/test_1463_1로_만들기.py
 python3 programmers/sql/test_sql.py
@@ -80,6 +81,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-20 | [등굣길](programmers/dp/등굣길.py) | Lv.3 | DP | O(m · n) |
 | 2026-10-23 | [배달](programmers/shortest_path/배달.py) | Lv.2 | 다익스트라 | O(E log E) |
 | 2026-10-24 | [야근 지수](programmers/heap/야근_지수.py) | Lv.3 | 힙 | O((W + n) log W) |
+| 2026-10-24 | [합승 택시 요금](programmers/shortest_path/합승_택시_요금.py) | Lv.3 | 다익스트라 | O(n · E log E) |
 
 ## 백준
 
