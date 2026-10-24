@@ -2,10 +2,12 @@
 https://school.programmers.co.kr/learn/courses/30/lessons/72413
 
 접근: 합승을 끝내고 갈라지는 지점 i를 1~n 모두 시도해서 s→i + i→a + i→b의 최솟값을 구한다.
-      거리는 다익스트라로 구한다. 도로는 양방향이라 그래프에 두 번 넣는다.
+      도로가 양방향이라 i→a 거리 = a→i 거리. 그래서 s, a, b에서 한 번씩만 다익스트라를 돌려
+      거리 배열 전체를 받고, i마다 세 배열의 i번 칸을 더한다. 그래프에는 도로를 두 번 넣는다.
       최단 경로는 같은 지점을 두 번 지나지 않아 도로를 최대 n−1 = 199개 쓰므로 최단 요금은 최대 19,900,000.
       초깃값은 이보다 커야 한다 (100,001로 두면 요금이 클 때 갱신이 안 돼 오답).
-시간 복잡도: O(n · E log E). 다익스트라 한 번이 O(E log E)이고 3n + 2번 부른다
+시간 복잡도: O(E log E + n). 다익스트라 3번(각 O(E log E)) + 갈라지는 지점 n개 확인
+             (처음 제출은 다익스트라를 i마다 3n + 2번 불러 O(n · E log E), 최대 입력 약 3초)
 """
 import heapq
 import random
@@ -20,9 +22,9 @@ def solution(n, s, a, b, fares):
         graph[i].append([j,k])
         graph[j].append([i,k])
 
-    def dijkstra(start,end):
+    def dijkstra(start):
         q = []
-        distance = [2_000_000_000]*(n+1)
+        distance = [20_000_000]*(n+1)
         distance[start] = 0
         heapq.heappush(q, (0, start))
         while q:
@@ -34,15 +36,18 @@ def solution(n, s, a, b, fares):
                 if cost < distance[i[0]]:
                     distance[i[0]] = cost
                     heapq.heappush(q, (cost, i[0]))
-        return distance[end]
+        return distance
 
-    tmp = 2_000_000_000
+    tmp = 20_000_000
+    start_s = dijkstra(s)
+    start_a = dijkstra(a)
+    start_b = dijkstra(b)
     for i in range(1,n+1):
-        sm = dijkstra(s,i) + dijkstra(i,a) + dijkstra(i,b)
+        sm = start_s[i] + start_a[i] + start_b[i]
         if tmp > sm:
             tmp = sm
 
-    answer = min((dijkstra(s,a) + dijkstra(s,b)) , tmp)
+    answer = min(start_s[a]+start_s[b] , tmp)
 
     return answer
 
