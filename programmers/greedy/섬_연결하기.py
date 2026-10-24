@@ -6,8 +6,17 @@ https://school.programmers.co.kr/learn/courses/30/lessons/42861
       바꾸는 도중 group[b]가 바뀌므로 비교할 옛 번호(old)를 반복 전에 저장한다.
 시간 복잡도: O(E log E + E · n), E = len(costs). 정렬 + 다리마다 그룹 번호를 n칸 확인.
              n ≤ 100이라 충분하다 (n이 크면 유니온파인드로 합치기를 빠르게 해야 한다)
+
+solution_union_find: 섬마다 가리키는 섬(parent)을 두고, 자기 자신을 가리키는 섬을 대표로 본다.
+      합칠 때는 대표의 칸 하나만 바꾸고, find_parent는 따라간 섬들이 대표를 바로 가리키게 고친다(경로 압축).
+      시간 복잡도: O(E log E). 정렬이 대부분이다 (섬 10만·다리 20만 0.3초 안팎)
+      재귀 find는 사슬이 1,000단계를 넘으면 RecursionError → setrecursionlimit
 """
 import random
+import sys
+import time
+
+sys.setrecursionlimit(10**6)
 
 
 def solution(n, costs):
@@ -26,6 +35,35 @@ def solution(n, costs):
         for i in range(n):
             if group[i] == old:
                 group[i] = group[a]
+
+    return answer
+
+
+def find_parent(parent, x):
+    if parent[x] != x:
+        parent[x] = find_parent(parent, parent[x])
+    return parent[x]
+
+
+def union_parent(parent,a,b):
+    a = find_parent(parent, a)
+    b = find_parent(parent, b)
+    if a < b:
+        parent[b] = a
+    else:
+        parent[a] = b
+
+
+def solution_union_find(n, costs):
+    answer = 0
+
+    group = [i for i in range(n)]
+    sorted_costs = sorted(costs, key=lambda x: x[2])
+
+    for a,b,c in sorted_costs:
+        if find_parent(group, a) != find_parent(group, b):
+            union_parent(group,a,b)
+            answer += c
 
     return answer
 
@@ -67,5 +105,14 @@ if __name__ == "__main__":
     for _ in range(2000):
         n = random.randint(1, 12)
         costs = make_costs(n, random.randint(0, n * 2)) if n > 1 else []
-        assert solution(n, costs) == prim(n, costs), (n, costs)
+        assert solution(n, costs) == prim(n, costs) == solution_union_find(n, costs), (n, costs)
+
+    chain = [[i, i + 1, 1] for i in range(4998, -1, -1)] + [[0, 4999, 2]]      # 뒤에서부터 이어 붙인 사슬
+    assert solution_union_find(5000, chain) == 4999                             # 재귀 한도를 안 올리면 RecursionError
+
+    n = 100000
+    big = make_costs(n, 100000)
+    start = time.time()
+    solution_union_find(n, big)
+    print(f"union-find, 섬 10만·다리 {len(big):,}: {time.time() - start:.2f}s")
     print("all tests passed")

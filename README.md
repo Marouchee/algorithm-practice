@@ -85,7 +85,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-24 | [야근 지수](programmers/heap/야근_지수.py) | Lv.3 | 힙 | O((W + n) log W) |
 | 2026-10-24 | [합승 택시 요금](programmers/shortest_path/합승_택시_요금.py) | Lv.3 | 다익스트라 | O(E log E + n) |
 | 2026-10-24 | [입국심사](programmers/binary_search/입국심사.py) | Lv.3 | 이분탐색 | O(m · log(10¹⁸)) |
-| 2026-10-25 | [섬 연결하기](programmers/greedy/섬_연결하기.py) | Lv.3 | MST (크루스칼) | O(E log E + E · n) |
+| 2026-10-25 | [섬 연결하기](programmers/greedy/섬_연결하기.py) | Lv.3 | MST (크루스칼), 유니온파인드 | O(E log E + E · n) / 유니온파인드 O(E log E) |
 
 ## 백준
 
