@@ -35,6 +35,7 @@ python3 programmers/implementation/신규_아이디_추천.py
 python3 programmers/implementation/키패드_누르기.py
 python3 programmers/implementation/크레인_인형뽑기_게임.py
 python3 programmers/implementation/주차_요금_계산.py
+python3 programmers/implementation/행렬_테두리_회전하기.py
 python3 programmers/dp/정수_삼각형.py
 python3 programmers/dp/등굣길.py
 python3 programmers/shortest_path/배달.py
@@ -86,6 +87,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-24 | [합승 택시 요금](programmers/shortest_path/합승_택시_요금.py) | Lv.3 | 다익스트라 | O(E log E + n) |
 | 2026-10-24 | [입국심사](programmers/binary_search/입국심사.py) | Lv.3 | 이분탐색 | O(m · log(10¹⁸)) |
 | 2026-10-25 | [섬 연결하기](programmers/greedy/섬_연결하기.py) | Lv.3 | MST (크루스칼), 유니온파인드 | O(E log E + E · n) / 유니온파인드 O(E log E) |
+| 2026-10-26 | [행렬 테두리 회전하기](programmers/implementation/행렬_테두리_회전하기.py) | Lv.2 | 구현 (격자 테두리 순회) | O(nm + k(n + m)) |
 
 ## 백준
 
