@@ -23,6 +23,7 @@ python3 programmers/sort/가장_큰_수.py
 python3 programmers/sort/H-Index.py
 python3 programmers/stack_queue/기능개발.py
 python3 programmers/stack_queue/프로세스.py
+python3 programmers/stack_queue/다리를_지나는_트럭.py
 python3 programmers/brute_force/모의고사.py
 python3 programmers/brute_force/카펫.py
 python3 programmers/brute_force/소수_찾기.py
@@ -90,6 +91,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-25 | [섬 연결하기](programmers/greedy/섬_연결하기.py) | Lv.3 | MST (크루스칼), 유니온파인드 | O(E log E + E · n) / 유니온파인드 O(E log E) |
 | 2026-10-26 | [행렬 테두리 회전하기](programmers/implementation/행렬_테두리_회전하기.py) | Lv.2 | 구현 (격자 테두리 순회) | O(nm + k(n + m)) |
 | 2026-10-27 | [프로세스](programmers/stack_queue/프로세스.py) | Lv.2 | 스택/큐 (큐 시뮬레이션) | O(n²) |
+| 2026-10-28 | [다리를 지나는 트럭](programmers/stack_queue/다리를_지나는_트럭.py) | Lv.2 | 스택/큐 (초 단위 시뮬레이션) | O(n · m) |
 
 ## 백준
 
