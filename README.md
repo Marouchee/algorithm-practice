@@ -46,6 +46,7 @@ python3 programmers/shortest_path/합승_택시_요금.py
 python3 programmers/heap/야근_지수.py
 python3 programmers/binary_search/입국심사.py
 python3 programmers/greedy/섬_연결하기.py
+python3 programmers/greedy/구명보트.py
 python3 baekjoon/test_1463_1로_만들기.py
 python3 programmers/sql/test_sql.py
 (cd sql_basics/01_select_group_join && python3 test_queries.py)
@@ -94,6 +95,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-27 | [프로세스](programmers/stack_queue/프로세스.py) | Lv.2 | 스택/큐 (큐 시뮬레이션) | O(n²) |
 | 2026-10-28 | [다리를 지나는 트럭](programmers/stack_queue/다리를_지나는_트럭.py) | Lv.2 | 스택/큐 (초 단위 시뮬레이션) | O(n · m) |
 | 2026-10-29 | [거리두기 확인하기](programmers/implementation/거리두기_확인하기.py) | Lv.2 | 구현 (격자 주변 12칸 검사) | O(5 · 25 · 12) |
+| 2026-10-29 | [구명보트](programmers/greedy/구명보트.py) | Lv.2 | 그리디, 투 포인터 | O(n log n) |
 
 ## 백준
 
