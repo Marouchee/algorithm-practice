@@ -38,6 +38,7 @@ python3 programmers/implementation/키패드_누르기.py
 python3 programmers/implementation/크레인_인형뽑기_게임.py
 python3 programmers/implementation/주차_요금_계산.py
 python3 programmers/implementation/행렬_테두리_회전하기.py
+python3 programmers/implementation/거리두기_확인하기.py
 python3 programmers/dp/정수_삼각형.py
 python3 programmers/dp/등굣길.py
 python3 programmers/shortest_path/배달.py
@@ -92,6 +93,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-26 | [행렬 테두리 회전하기](programmers/implementation/행렬_테두리_회전하기.py) | Lv.2 | 구현 (격자 테두리 순회) | O(nm + k(n + m)) |
 | 2026-10-27 | [프로세스](programmers/stack_queue/프로세스.py) | Lv.2 | 스택/큐 (큐 시뮬레이션) | O(n²) |
 | 2026-10-28 | [다리를 지나는 트럭](programmers/stack_queue/다리를_지나는_트럭.py) | Lv.2 | 스택/큐 (초 단위 시뮬레이션) | O(n · m) |
+| 2026-10-29 | [거리두기 확인하기](programmers/implementation/거리두기_확인하기.py) | Lv.2 | 구현 (격자 주변 12칸 검사) | O(5 · 25 · 12) |
 
 ## 백준
 
