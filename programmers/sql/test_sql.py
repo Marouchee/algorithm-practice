@@ -34,7 +34,7 @@ INS = [
     ("A003", "Dog", "2025-02-10 14:00:00", "Sick", "Max", "Intact Male"),
     ("A004", "Cat", "2025-01-20 11:00:00", "Normal", "Luna", "Spayed Female"),
     ("A005", "Dog", "2024-12-30 16:00:00", "Normal", None, "Intact Female"),
-    ("A006", "Cat", "2025-03-01 13:00:00", "Normal", "Coco", "Intact Male"),
+    ("A006", "Cat", "2025-03-01 13:00:00", "Normal", "Toby", "Intact Male"),
     ("A007", "Dog", "2024-11-11 08:00:00", "Aged", "Luna", "Neutered Male"),
     ("A008", "Bird", "2025-03-05 12:00:00", "Normal", "Kiwi", "Intact Male"),
     ("A009", "Dog", "2025-03-10 09:30:00", "Normal", "Ella", "Spayed Female"),
@@ -48,7 +48,7 @@ OUTS = [
     ("A090", "Dog", "2025-01-10 15:00:00", "Ghost", "Intact Male"),    # 입소 기록 없음
     ("A080", "Cat", "2025-01-12 17:00:00", "Bella", "Spayed Female"),  # 입소 기록 없음
     ("A003", "Dog", "2025-02-20 09:00:00", "Max", "Neutered Male"),      # 9시 정각: 포함
-    ("A006", "Cat", "2025-03-05 19:59:00", "Coco", "Neutered Male"),     # 19시 59분: 포함
+    ("A006", "Cat", "2025-03-05 19:59:00", "Toby", "Neutered Male"),     # 19시 59분: 포함
     ("A008", "Bird", "2025-03-08 08:59:00", "Kiwi", "Intact Male"),      # 8시 59분: 제외
     ("A009", "Dog", "2025-03-15 20:00:00", "Ella", "Spayed Female"),     # 20시 정각: 제외
     ("A010", "Cat", "2025-03-10 10:30:00", "Mabel", "Spayed Female"),    # 10시 두 번째, 보호 시작(3/11)보다 이른 입양
@@ -161,7 +161,7 @@ if __name__ == "__main__":
 
     # Intact → Neutered/Spayed만. A008(Intact → Intact), A001·A004·A009(들어올 때 이미 중성화) 제외
     assert run("보호소에서_중성화한_동물") == [
-        ("A003", "Dog", "Max"), ("A006", "Cat", "Coco"), ("A010", "Cat", "Mabel"), ("A011", "Dog", "Noel"),
+        ("A003", "Dog", "Max"), ("A006", "Cat", "Toby"), ("A010", "Cat", "Mabel"), ("A011", "Dog", "Noel"),
     ]
 
     # 보호 시작일 순이면 A010 → A011, 입양일 순이면 거꾸로
