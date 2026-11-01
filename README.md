@@ -41,6 +41,7 @@ python3 programmers/implementation/크레인_인형뽑기_게임.py
 python3 programmers/implementation/주차_요금_계산.py
 python3 programmers/implementation/행렬_테두리_회전하기.py
 python3 programmers/implementation/거리두기_확인하기.py
+python3 programmers/implementation/프렌즈4블록.py
 python3 programmers/dp/정수_삼각형.py
 python3 programmers/dp/등굣길.py
 python3 programmers/shortest_path/배달.py
@@ -100,6 +101,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-29 | [거리두기 확인하기](programmers/implementation/거리두기_확인하기.py) | Lv.2 | 구현 (격자 주변 12칸 검사) | O(5 · 25 · 12) |
 | 2026-10-29 | [구명보트](programmers/greedy/구명보트.py) | Lv.2 | 그리디, 투 포인터 | O(n log n) |
 | 2026-10-31 | [체육복](programmers/greedy/체육복.py) | Lv.1 | 그리디 | O(n) |
+| 2026-11-01 | [프렌즈4블록](programmers/implementation/프렌즈4블록.py) | Lv.2 | 구현 (격자 시뮬레이션, 블록 떨어뜨리기) | O(m³n²) |
 
 ## 백준
 
