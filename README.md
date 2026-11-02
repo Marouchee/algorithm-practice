@@ -47,6 +47,7 @@ python3 programmers/dp/등굣길.py
 python3 programmers/shortest_path/배달.py
 python3 programmers/shortest_path/합승_택시_요금.py
 python3 programmers/heap/야근_지수.py
+python3 programmers/heap/더_맵게.py
 python3 programmers/binary_search/입국심사.py
 python3 programmers/greedy/섬_연결하기.py
 python3 programmers/greedy/구명보트.py
@@ -102,6 +103,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-29 | [구명보트](programmers/greedy/구명보트.py) | Lv.2 | 그리디, 투 포인터 | O(n log n) |
 | 2026-10-31 | [체육복](programmers/greedy/체육복.py) | Lv.1 | 그리디 | O(n) |
 | 2026-11-01 | [프렌즈4블록](programmers/implementation/프렌즈4블록.py) | Lv.2 | 구현 (격자 시뮬레이션, 블록 떨어뜨리기) | O(m³n²) |
+| 2026-11-02 | [더 맵게](programmers/heap/더_맵게.py) | Lv.2 | 힙 | O(n log n) |
 
 ## 백준
 
