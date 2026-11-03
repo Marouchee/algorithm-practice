@@ -2,7 +2,7 @@
 
 하루 한 문제씩 푸는 Python 코딩 연습 기록입니다. 문제마다 풀이와 테스트를 함께 둡니다.
 
-> **작성 방식:** 각 파일의 `solution` 함수와 SQL 쿼리는 직접 작성했습니다. 테스트, 정답 비교용 풀이(`reference`·`brute` 등), 파일 상단 설명 정리는 AI 도구(Claude)의 도움을 받았고, 커밋의 `Co-Authored-By` 표시는 그 때문입니다. 001~003과 문법·SQL 드릴의 문제는 연습용으로 만든 문제입니다. 프로그래머스·백준 문제는 본문 없이 이름과 링크만 적었습니다.
+> **작성 방식:** 각 파일의 `solution` 함수와 SQL 쿼리는 직접 작성했습니다. 테스트, 정답 비교용 풀이(`reference`·`brute` 등), 파일 상단 설명 정리는 AI 도구(Claude)의 도움을 받았고, 커밋의 `Co-Authored-By` 표시는 그 때문입니다. 001~003, `swea_style/`(표준 입력 형식 연습)과 문법·SQL 드릴의 문제는 연습용으로 만든 문제입니다. `swea_style/`은 `solution.py`(직접 작성)를 표준 입력으로 실행해 출력 전체를 비교합니다. 프로그래머스·백준 문제는 본문 없이 이름과 링크만 적었습니다.
 
 ## 실행
 
@@ -10,6 +10,7 @@
 python3 001_dedup_window/test_solution.py
 python3 002_top_k/test_solution.py
 python3 003_patrol_robot/test_solution.py
+python3 swea_style/S01_구간_합_차이/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -104,6 +105,7 @@ python3 programmers/sql/test_sql.py
 | 2026-10-31 | [체육복](programmers/greedy/체육복.py) | Lv.1 | 그리디 | O(n) |
 | 2026-11-01 | [프렌즈4블록](programmers/implementation/프렌즈4블록.py) | Lv.2 | 구현 (격자 시뮬레이션, 블록 떨어뜨리기) | O(m³n²) |
 | 2026-11-02 | [더 맵게](programmers/heap/더_맵게.py) | Lv.2 | 힙 | O(n log n) |
+| 2026-11-03 | [S01 구간 합 차이](swea_style/S01_구간_합_차이/) | 직접 만든 문제 | 배열, 표준 입력(T 케이스) | O(T · (N − M + 1) · M) |
 
 ## 백준
 
