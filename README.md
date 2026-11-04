@@ -11,6 +11,7 @@ python3 001_dedup_window/test_solution.py
 python3 002_top_k/test_solution.py
 python3 003_patrol_robot/test_solution.py
 python3 swea_style/S01_구간_합_차이/test_solution.py
+python3 swea_style/S02_꽃가루_모으기/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -106,6 +107,7 @@ python3 programmers/sql/test_sql.py
 | 2026-11-01 | [프렌즈4블록](programmers/implementation/프렌즈4블록.py) | Lv.2 | 구현 (격자 시뮬레이션, 블록 떨어뜨리기) | O(m³n²) |
 | 2026-11-02 | [더 맵게](programmers/heap/더_맵게.py) | Lv.2 | 힙 | O(n log n) |
 | 2026-11-03 | [S01 구간 합 차이](swea_style/S01_구간_합_차이/) | 직접 만든 문제 | 배열, 표준 입력(T 케이스) | O(T · (N − M + 1) · M) |
+| 2026-11-04 | [S02 꽃가루 모으기](swea_style/S02_꽃가루_모으기/) | 직접 만든 문제 | 격자 4방향 탐색, 범위 검사 | O(T · N · M · 4k) |
 
 ## 백준
 
