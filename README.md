@@ -14,6 +14,7 @@ python3 swea_style/S01_구간_합_차이/test_solution.py
 python3 swea_style/S02_꽃가루_모으기/test_solution.py
 python3 swea_style/S03_달팽이_번호/test_solution.py
 python3 swea_style/S04_패널_배치/test_solution.py
+python3 swea_style/S05_도장_맞추기/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -112,6 +113,7 @@ python3 programmers/sql/test_sql.py
 | 2026-11-04 | [S02 꽃가루 모으기](swea_style/S02_꽃가루_모으기/) | 직접 만든 문제 | 격자 4방향 탐색, 범위 검사 | O(T · N · M · 4k) |
 | 2026-11-05 | [S03 달팽이 번호](swea_style/S03_달팽이_번호/) | 직접 만든 문제 | 격자 시뮬레이션 (방향 전환) | O(T · (N · M + Q)) |
 | 2026-11-07 | [S04 패널 배치](swea_style/S04_패널_배치/) | 직접 만든 문제 | 격자 M×M 부분 합, 최댓값 개수 세기 | O(T · (M² · (N − M + 1)² + N²)) |
+| 2026-11-08 | [S05 도장 맞추기](swea_style/S05_도장_맞추기/) | 직접 만든 문제 | 격자 90도 회전, 2차원 리스트 비교 | O(T · N²) |
 
 ## 백준
 
