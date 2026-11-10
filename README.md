@@ -17,6 +17,7 @@ python3 swea_style/S04_패널_배치/test_solution.py
 python3 swea_style/S05_도장_맞추기/test_solution.py
 python3 swea_style/S06_회문_줄/test_solution.py
 python3 swea_style/S07_카드_합_맞추기/test_solution.py
+python3 swea_style/S08_작업_순서/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -118,6 +119,7 @@ python3 programmers/sql/test_sql.py
 | 2026-11-08 | [S05 도장 맞추기](swea_style/S05_도장_맞추기/) | 직접 만든 문제 | 격자 90도 회전, 2차원 리스트 비교 | O(T · N²) |
 | 2026-11-08 | [S06 회문 줄](swea_style/S06_회문_줄/) | 직접 만든 문제 | 문자 격자 가로·세로 구간, 슬라이스 | O(T · (N · M³ + M · N³)) |
 | 2026-11-09 | [S07 카드 합 맞추기](swea_style/S07_카드_합_맞추기/) | 직접 만든 문제 | 부분집합 (비트마스크) | O(T · N · 2^N) |
+| 2026-11-10 | [S08 작업 순서](swea_style/S08_작업_순서/) | 직접 만든 문제 | 순열 백트래킹, 가지치기 | O(T · N · N!) (가지치기 전) |
 
 ## 백준
 
