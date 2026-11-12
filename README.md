@@ -19,6 +19,7 @@ python3 swea_style/S06_회문_줄/test_solution.py
 python3 swea_style/S07_카드_합_맞추기/test_solution.py
 python3 swea_style/S08_작업_순서/test_solution.py
 python3 swea_style/S09_가장_가까운_충전소/test_solution.py
+python3 swea_style/S10_섬_세기/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -122,6 +123,7 @@ python3 programmers/sql/test_sql.py
 | 2026-11-09 | [S07 카드 합 맞추기](swea_style/S07_카드_합_맞추기/) | 직접 만든 문제 | 부분집합 (비트마스크) | O(T · N · 2^N) |
 | 2026-11-10 | [S08 작업 순서](swea_style/S08_작업_순서/) | 직접 만든 문제 | 순열 백트래킹, 가지치기 | O(T · N · N!) (가지치기 전) |
 | 2026-11-11 | [S09 가장 가까운 충전소](swea_style/S09_가장_가까운_충전소/) | 직접 만든 문제 | 격자 BFS 최단거리 (`deque`, 넣을 때 방문 표시) | O(T · N · M) |
+| 2026-11-12 | [S10 섬 세기](swea_style/S10_섬_세기/) | 직접 만든 문제 | 연결 요소 개수·최대 크기 (스택 DFS, 재귀 없이) | O(T · N · M) |
 
 ## 백준
 
