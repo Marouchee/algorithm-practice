@@ -21,6 +21,7 @@ python3 swea_style/S08_작업_순서/test_solution.py
 python3 swea_style/S09_가장_가까운_충전소/test_solution.py
 python3 swea_style/S10_섬_세기/test_solution.py
 python3 swea_style/S11_강의실_예약/test_solution.py
+python3 swea_style/S12_개미_걸음/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -126,6 +127,7 @@ python3 programmers/sql/test_sql.py
 | 2026-11-11 | [S09 가장 가까운 충전소](swea_style/S09_가장_가까운_충전소/) | 직접 만든 문제 | 격자 BFS 최단거리 (`deque`, 넣을 때 방문 표시) | O(T · N · M) |
 | 2026-11-12 | [S10 섬 세기](swea_style/S10_섬_세기/) | 직접 만든 문제 | 연결 요소 개수·최대 크기 (스택 DFS, 재귀 없이) | O(T · N · M) |
 | 2026-11-13 | [S11 강의실 예약](swea_style/S11_강의실_예약/) | 직접 만든 문제 | 그리디 (끝 시각 순 정렬, 구간 고르기) | O(T · N log N) |
+| 2026-11-15 | [S12 개미 걸음](swea_style/S12_개미_걸음/) | 직접 만든 문제 | 격자 시뮬레이션 (방향 회전 + 칸 상태 갱신) | O(T · (K + N²)) |
 
 ## 백준
 
