@@ -22,6 +22,8 @@ python3 swea_style/S09_가장_가까운_충전소/test_solution.py
 python3 swea_style/S10_섬_세기/test_solution.py
 python3 swea_style/S11_강의실_예약/test_solution.py
 python3 swea_style/S12_개미_걸음/test_solution.py
+python3 swea_style/M01_전시장_인원/test_solution.py
+python3 swea_style/M02_창고_로봇/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -128,6 +130,8 @@ python3 programmers/sql/test_sql.py
 | 2026-11-12 | [S10 섬 세기](swea_style/S10_섬_세기/) | 직접 만든 문제 | 연결 요소 개수·최대 크기 (스택 DFS, 재귀 없이) | O(T · N · M) |
 | 2026-11-13 | [S11 강의실 예약](swea_style/S11_강의실_예약/) | 직접 만든 문제 | 그리디 (끝 시각 순 정렬, 구간 고르기) | O(T · N log N) |
 | 2026-11-15 | [S12 개미 걸음](swea_style/S12_개미_걸음/) | 직접 만든 문제 | 격자 시뮬레이션 (방향 회전 + 칸 상태 갱신) | O(T · (K + N²)) |
+| 2026-11-16 | [M01 전시장 인원](swea_style/M01_전시장_인원/) | 직접 만든 문제 (80분 2문제 세트) | 정렬 + 두 포인터 사건 처리, 시각 문자열 | O(T · N log N) |
+| 2026-11-16 | [M02 창고 로봇](swea_style/M02_창고_로봇/) | 직접 만든 문제 (80분 2문제 세트) | 격자 시뮬레이션 (명령, 용량, 상태 갱신) | O(T · (명령 길이 + N · M)) |
 
 ## 백준
 
