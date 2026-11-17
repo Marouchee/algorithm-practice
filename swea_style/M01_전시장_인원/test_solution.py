@@ -1,4 +1,4 @@
-"""solution.py를 표준 입력으로 실행해 출력 전체를 비교한다"""
+"""solution.py와 solution_minutes.py를 표준 입력으로 실행해 출력 전체를 비교한다"""
 import os
 import random
 import subprocess
@@ -6,12 +6,19 @@ import sys
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SOLUTION = os.path.join(HERE, "solution.py")
+SOLUTIONS = [os.path.join(HERE, name) for name in ("solution.py", "solution_minutes.py")]
+
+
+def run_one(path, text):
+    return subprocess.run([sys.executable, path], input=text, capture_output=True,
+                          text=True, check=True).stdout
 
 
 def run(text):
-    return subprocess.run([sys.executable, SOLUTION], input=text, capture_output=True,
-                          text=True, check=True).stdout
+    """두 풀이를 모두 실행하고 출력이 같은지 확인한다"""
+    outs = [run_one(path, text) for path in SOLUTIONS]
+    assert outs[0] == outs[1], text
+    return outs[0]
 
 
 def hm(t):
