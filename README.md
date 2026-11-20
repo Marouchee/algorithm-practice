@@ -24,6 +24,9 @@ python3 swea_style/S11_강의실_예약/test_solution.py
 python3 swea_style/S12_개미_걸음/test_solution.py
 python3 swea_style/M01_전시장_인원/test_solution.py
 python3 swea_style/M02_창고_로봇/test_solution.py
+python3 swea_style/M03_압축_문자열/test_solution.py
+python3 swea_style/M04_성적_순위/test_solution.py
+python3 swea_style/M05_레이저_거울/test_solution.py
 python3 python_basics/01_list/test_solution.py
 python3 python_basics/02_dict_set/test_solution.py
 python3 python_basics/03_collections/test_solution.py
@@ -132,6 +135,9 @@ python3 programmers/sql/test_sql.py
 | 2026-11-15 | [S12 개미 걸음](swea_style/S12_개미_걸음/) | 직접 만든 문제 | 격자 시뮬레이션 (방향 회전 + 칸 상태 갱신) | O(T · (K + N²)) |
 | 2026-11-16 | [M01 전시장 인원](swea_style/M01_전시장_인원/) | 직접 만든 문제 (80분 2문제 세트) | 정렬 + 두 포인터 사건 처리, 시각 문자열 · 다시 풀기: 분 단위 배열 (`solution_minutes.py`) | O(T · N log N) / O(T · N · 1440) |
 | 2026-11-16 | [M02 창고 로봇](swea_style/M02_창고_로봇/) | 직접 만든 문제 (80분 2문제 세트) | 격자 시뮬레이션 (명령, 용량, 상태 갱신) | O(T · (명령 길이 + N · M)) |
+| 2026-11-18 | [M03 압축 문자열](swea_style/M03_압축_문자열/) | 직접 만든 문제 (80분 3문제 세트) | 문자열 파싱 (글자 + 여러 자리 숫자) | O(T · 펼친 길이) |
+| 2026-11-18 | [M04 성적 순위](swea_style/M04_성적_순위/) | 직접 만든 문제 (80분 3문제 세트) | 여러 기준 정렬 (`key=lambda` 튜플) | O(T · N log N) |
+| 2026-11-18 | [M05 레이저 거울](swea_style/M05_레이저_거울/) | 직접 만든 문제 (80분 3문제 세트) | 격자 시뮬레이션 (반사 표, 출발점 2(N+M)개, 함수로 정리) | O(T · (N + M) · N · M) |
 
 ## 백준
 
